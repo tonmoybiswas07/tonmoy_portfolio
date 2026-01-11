@@ -5,31 +5,30 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { BackgroundBeams } from "@/Components/ui/background-beams";
+import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
   const formRef = useRef(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = async (e) => {
+  e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_d4kbme1",
-        "template_zbitgit",
-        formRef.current,
-        "V1YUuKLLEw6rslv9W"
-      )
-      .then(
-        () => {
-          alert("Message sent successfully 🚀");
-          formRef.current.reset();
-        },
-        (error) => {
-          console.log(error);
-          alert("Something went wrong ❌");
-        }
-      );
-  };
+  try {
+    await emailjs.sendForm(
+      "service_d4kbme1",
+      "template_zbitgit",
+      formRef.current,
+      "V1YUuKLLEw6rslv9W"
+    );
+
+    toast.success("Message sent successfully 🚀");
+    formRef.current.reset();
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+   formRef.current.reset();
+  }
+};
+
 
   return (
     <section
@@ -130,7 +129,13 @@ const Contact = () => {
           </form>
         </motion.div>
       </div>
-
+<ToastContainer position="top-right"
+  autoClose={3000}
+  hideProgressBar={false}
+  newestOnTop
+  closeOnClick
+  pauseOnHover
+  theme="dark"></ToastContainer>
       {/* BACKGROUND EFFECT */}
       <BackgroundBeams />
     </section>

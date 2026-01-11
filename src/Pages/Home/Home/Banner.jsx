@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaFacebook,
   FaGithub,
@@ -9,24 +10,60 @@ import { RiContactsFill } from "react-icons/ri";
 import { IoMdDownload } from "react-icons/io";
 
 const Banner = () => {
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.2, duration: 0.8 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center gap-20">
-      <div className="content">
+    <motion.div
+      className="flex flex-col lg:flex-row justify-center items-center gap-20"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="content" variants={item}>
         <div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
+          <motion.h1
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white"
+            variants={item}
+          >
             Hello,
-          </h1>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
+          </motion.h1>
+          <motion.h1
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white"
+            variants={item}
+          >
             This is <span className="text-[#F6339A]">TONMOY</span> , I'm a
-          </h1>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
+          </motion.h1>
+          <motion.h1
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white"
+            variants={item}
+          >
             Professional <span className="text-[#15F2B2]">FrontEnd</span>
-          </h1>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
+          </motion.h1>
+          <motion.h1
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white"
+            variants={item}
+          >
             <span className="text-[#15F2B2]">Developer</span>.
-          </h1>
+          </motion.h1>
         </div>
-        <div className="icon mt-10 flex justify-center lg:justify-start gap-6">
+
+        <motion.div
+          className="icon mt-10 flex justify-center lg:justify-start gap-6"
+          variants={item}
+        >
           <a
             className="text-4xl text-[#F6339A] transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
             href=""
@@ -42,10 +79,12 @@ const Banner = () => {
           <a className="text-4xl text-[#F6339A]" href="">
             <FaInstagram />
           </a>
-          {/* <a href=""><TbBrandLeetcode /></a> */}
-        </div>
-        {/* button */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-12">
+        </motion.div>
+
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 mt-12"
+          variants={item}
+        >
           <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
             <span className="absolute inset-0 overflow-hidden rounded-full">
               <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
@@ -60,6 +99,7 @@ const Banner = () => {
             </div>
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
           </button>
+
           <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
             <span className="absolute inset-0 overflow-hidden rounded-full">
               <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
@@ -74,22 +114,24 @@ const Banner = () => {
             </div>
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
           </button>
-        </div>
-      </div>
-      <div className="image">
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="image"
+        variants={item}
+      >
         <div
           className=" min-h-[60vh] lg:min-h-screen sm:px-4
  flex items-center justify-center px-4"
         >
           <div className="relative w-90 md:w-full lg:w-full max-w-4xl rounded-2xl  border border-indigo-500/30 shadow-[0_0_80px_rgba(124,58,237,0.25)]">
-            {/* Top bar */}
             <div className="flex items-center gap-3 px-6 py-4 border-b border-indigo-500/30">
               <span className="w-4 h-4 rounded-full bg-red-600" />
               <span className="w-4 h-4 rounded-full bg-gray-700" />
               <span className="w-4 h-4 rounded-full bg-green-500" />
             </div>
 
-            {/* Code area */}
             <pre className="p-4 sm:p-6 lg:p-8 text-sm sm:text-base lg:text-[17px] text-wrap">
               <code>
                 <span className="text-pink-500">const</span>{" "}
@@ -173,8 +215,8 @@ const Banner = () => {
             </pre>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
