@@ -7,14 +7,15 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
   const [activeLabel, setActiveLabel] = useState('Home');
 
-  const navItems = [
-    { label: 'Home', icon: <FaHome /> },
-    { label: 'Skills', icon: <FaCode /> },
-    { label: 'Education', icon: <FaGraduationCap /> },
-    { label: 'Experience', icon: <PiShoppingBagOpenFill /> },
-    { label: 'Projects', icon: <FaLaptopCode /> },
-    { label: 'Contact', icon: <IoMdMail /> },
-  ];
+const navItems = [
+  { label: 'Home', icon: <FaHome />, path: '/' },
+  { label: 'Skills', icon: <FaCode />, path: '/skills' },
+  { label: 'Education', icon: <FaGraduationCap />, path: '/education' },
+  { label: 'Experience', icon: <PiShoppingBagOpenFill />, path: '/experience' },
+  { label: 'Projects', icon: <FaLaptopCode />, path: '/projects' },
+  { label: 'Contact', icon: <IoMdMail />, path: '/contact' },
+];
+
 
   return (
     <header
@@ -37,6 +38,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <NavLink
                   key={item.label}
+                    to={item.path} 
                   onClick={() => setActiveLabel(item.label)}
                   className="flex flex-col md:flex-row items-center gap-1 md:gap-2"
                 >
