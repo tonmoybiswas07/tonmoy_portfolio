@@ -5,7 +5,7 @@ import Footer from '../../Pages/Shared/Footer/Footer';
 
 const RootLayouts = () => {
     return (
-        <div className='bg-gray-900/95 text-white min-w-screen min-h-screen'>
+        <div className='bg-gradient-to-b from-[#020617] to-[#020617]/90 text-white min-w-screen min-h-screen'>
             <div className='max-w-7xl mx-auto '>
                 <Navbar></Navbar>
             <Outlet></Outlet>

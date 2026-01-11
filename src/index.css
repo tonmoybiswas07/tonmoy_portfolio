@@ -3,7 +3,12 @@
 @plugin "tailwindcss-animate";
 @import "tw-animate-css";
 
+
+
 @custom-variant dark (&:is(.dark *));
+
+
+
 
 a.active{
     background-color: rgba(128, 128, 128, 0.498);
