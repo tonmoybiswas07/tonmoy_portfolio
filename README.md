@@ -3,7 +3,7 @@
 ![Portfolio Banner](https://i.ibb.co.com/KvJfs8h/Screenshot-2026-01-12-at-3-33-34-PM.png)
 
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)]()
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://tonmoyportfolio.vercel.app/)
 
 
 ## Table of Contents
@@ -49,4 +49,4 @@ It is designed with modern UI/UX principles, smooth animations, and responsive l
 ## Installation
 1. Clone the repository:  
 ```bash
-git clone https://github.com/tonmoybiswas07/portfolio.git
+git clone https://github.com/tonmoybiswas07/tonmoy_portfolio.git
