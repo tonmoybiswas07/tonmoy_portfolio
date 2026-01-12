@@ -6,6 +6,10 @@ import './index.css'
 import App from './App.jsx'
 import { RouterProvider } from 'react-router'
 import router from './Routes/Routes.jsx'
+import Loader from './Components/ui/Loader/Loader'
+
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

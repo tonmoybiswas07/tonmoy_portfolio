@@ -31,6 +31,7 @@ const Contact = () => {
 
 
   return (
+    <div>
     <section
       id="contact"
       className="relative min-h-screen flex items-center justify-center px-6 py-20"
@@ -137,8 +138,11 @@ const Contact = () => {
   pauseOnHover
   theme="dark"></ToastContainer>
       {/* BACKGROUND EFFECT */}
-      <BackgroundBeams />
+      
     </section>
+    
+        <BackgroundBeams />
+    </div>
   );
 };
 
