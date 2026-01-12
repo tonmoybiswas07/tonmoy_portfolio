@@ -1,16 +1,52 @@
-# React + Vite
+# Tonmoy Biswas – Frontend Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Banner](https://i.ibb.co.com/KvJfs8h/Screenshot-2026-01-12-at-3-33-34-PM.png)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)]()
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Table of Contents
+- [About](#about)  
+- [Features](#features)  
+- [Technologies Used](#technologies-used)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Screenshots](#screenshots)  
+- [Contact](#contact)  
+- [License](#license)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## About
+This is the personal portfolio of **Tonmoy Biswas**, a passionate **Frontend Developer** from Bangladesh. The portfolio showcases projects, skills, experience, and allows users to contact or download the resume directly.  
+
+It is designed with modern UI/UX principles, smooth animations, and responsive layouts to provide an engaging experience.  
+
+---
+
+## Features
+- Fully **responsive** design  
+- Animated **Hero/Banner section** with social links  
+- Showcase of **projects and skills**  
+- Contact button integrated with **email**  
+- Resume download button  
+- Interactive **code-style block** to highlight skills  
+- Modern **React + Tailwind CSS + Framer Motion** setup  
+
+---
+
+## Technologies Used
+- **React 19** – Component-based frontend framework  
+- **Tailwind CSS** – Utility-first CSS framework for rapid styling  
+- **Framer Motion** – Smooth animations and transitions  
+- **React Icons** – Beautiful iconography  
+- **Vite** – Fast React development environment  
+- **JavaScript (ES6+)** – Frontend logic and interactivity  
+
+---
+
+## Installation
+1. Clone the repository:  
+```bash
+git clone https://github.com/tonmoybiswas07/portfolio.git
