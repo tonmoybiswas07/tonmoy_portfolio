@@ -52,7 +52,8 @@ const Experience = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="relative min-h-screen  text-white px-6 md:px-20 py-24 overflow-hidden"
+      className="relative min-h-screen  text-white px-6 md:px-20  py-20
+      pb-30 overflow-hidden"
     >
       {/* ----------- TITLE ----------- */}
       <div className="text-center mb-20 relative z-10">

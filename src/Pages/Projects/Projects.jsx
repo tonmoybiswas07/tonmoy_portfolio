@@ -95,7 +95,7 @@ const Projects = () => {
   const project = projects[index];
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen pb-23 overflow-hidden">
       {/* CONTENT */}
       <div className="relative z-20">
         <h2 className="text-4xl text-[#34AADB] font-extrabold text-center pt-10">

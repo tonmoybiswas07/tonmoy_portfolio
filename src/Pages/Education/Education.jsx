@@ -23,7 +23,7 @@ const item = {
 
 const Education = () => {
   return (
-    <div className="mx-5 md:mx-10 lg:mx-20">
+    <div className="mx-5 md:mx-10 lg:mx-20 pb-30">
 
         <div className="pt-20 mb-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#34AADB] font-extrabold text-center">Educational Journey</h1>
@@ -35,7 +35,7 @@ const Education = () => {
           initial="hidden"
           animate="show"
           whileHover={{ y: -6 }}
-          className="max-w-4xl mx-auto rounded-2xl border border-slate-700 bg-gradient-to-br from-[#050b1f] to-[#020617] p-8 text-slate-200 shadow-xl"
+          className="max-w-4xl mx-auto rounded-2xl border flex-1 border-slate-700 bg-gradient-to-br from-[#050b1f] to-[#020617] p-8 text-slate-200 shadow-xl"
         >
           {/* Title */}
           <motion.div variants={item} className="flex items-center gap-3 mb-6">
@@ -109,7 +109,7 @@ const Education = () => {
           initial="hidden"
           animate="show"
           whileHover={{ y: -6 }}
-          className="max-w-4xl mx-auto rounded-2xl border border-slate-700 bg-gradient-to-br from-[#050b1f] to-[#020617] p-8 text-slate-200 shadow-xl"
+          className="max-w-4xl mx-auto rounded-2xl border flex-1 border-slate-700 bg-gradient-to-br from-[#050b1f] to-[#020617] p-8 text-slate-200 shadow-xl"
         >
           {/* Title */}
           <motion.div variants={item} className="flex items-center gap-3 mb-6">
@@ -140,7 +140,7 @@ const Education = () => {
           {/* Description */}
           <motion.div
             variants={item}
-            className="border-l-4 border-cyan-400 pl-4 italic text-slate-300 mb-8"
+            className="border-l-4 border-cyan-400 text-wrap pl-4 italic text-slate-300 mb-8"
           >
             Diploma in Engineering in Computer Technology, driven by a passion for problem-solving, software development, and modern computing systems.
           </motion.div>
