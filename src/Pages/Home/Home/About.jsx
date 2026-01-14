@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import hero from "../../../assets/WhatsApp Image 2026-01-11 at 21.57.49.jpeg";
+import { BackgroundBeams } from "@/Components/ui/background-beams";
 
 const About = () => {
   return (
@@ -71,6 +72,7 @@ const About = () => {
           />
         </motion.div>
       </div>
+      <BackgroundBeams></BackgroundBeams>
     </motion.div>
   );
 };

@@ -29,7 +29,7 @@ const navItems = [
         <div className="bg-gray-900/90 rounded-full px-6 py-3">
 
           {/* Mobile active text */}
-          <div className="md:hidden text-center text-sm text-white mb-2">
+          <div className=" lg:hidden md:block text-center text-sm text-white mb-2">
             {activeLabel}
           </div>
 
@@ -43,7 +43,7 @@ const navItems = [
                   className="flex flex-col md:flex-row items-center gap-1 md:gap-2"
                 >
                   <span className="text-xl">{item.icon}</span>
-                  <li className="hidden md:block text-sm md:text-lg">
+                  <li className="hidden md:hidden lg:block text-sm md:text-lg">
                     {item.label}
                   </li>
                 </NavLink>

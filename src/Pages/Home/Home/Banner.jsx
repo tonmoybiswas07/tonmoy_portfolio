@@ -32,7 +32,7 @@ const Banner = () => {
 
   return (
     <motion.div
-      className="flex flex-col lg:flex-row justify-center items-center gap-20 px-4"
+      className="flex flex-col lg:flex-row justify-center items-center gap-20 mx-0 md:mx-10 lg:mx-20 px-4"
       variants={container}
       initial="hidden"
       animate="visible"
@@ -98,7 +98,7 @@ const Banner = () => {
 
         {/* Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 mt-12"
+          className="flex justify-center items-center md:justify-start md:items-start lg:justify-start lg:items-start flex-col sm:flex-row gap-4 mt-12"
           variants={item}
         >
           {/* Contact Button */}

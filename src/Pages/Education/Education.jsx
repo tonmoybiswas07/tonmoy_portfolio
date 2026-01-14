@@ -23,13 +23,13 @@ const item = {
 
 const Education = () => {
   return (
-    <div>
+    <div className="mx-5 md:mx-10 lg:mx-20">
 
         <div className="pt-20 mb-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#34AADB] font-extrabold text-center">Educational Journey</h1>
             <p className="text-sm text-white text-center mt-4">Discover how academic excellence shapes innovative thinking and professional growth.</p>
         </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+      <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center gap-5">
         <motion.div
           variants={container}
           initial="hidden"

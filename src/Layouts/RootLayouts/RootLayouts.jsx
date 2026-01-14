@@ -18,8 +18,8 @@ const RootLayouts = () => {
     return <Loader />;
   }
   return (
-    <div className="bg-gradient-to-b from-[#020617] to-[#020617]/90 text-white min-w-screen min-h-screen">
-      <div className="max-w-7xl mx-auto ">
+    <div className=" max-w-7xl mx-auto overflow-x-hidden bg-gradient-to-b from-[#020617] to-[#020617]/90 text-white min-w-screen min-h-screen">
+      <div className="">
         <Navbar></Navbar>
         <Outlet></Outlet>
         <Footer></Footer>

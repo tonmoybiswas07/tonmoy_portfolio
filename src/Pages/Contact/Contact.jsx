@@ -36,7 +36,7 @@ const Contact = () => {
       id="contact"
       className="relative min-h-screen flex items-center justify-center px-6 py-20"
     >
-      <div className="relative z-10 max-w-6xl w-full grid md:grid-cols-2 gap-14 items-center">
+      <div className="relative z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         
         {/* LEFT */}
         <motion.div

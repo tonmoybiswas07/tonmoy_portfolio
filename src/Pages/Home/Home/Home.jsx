@@ -1,4 +1,3 @@
-
 import { BackgroundBeams } from "@/Components/ui/background-beams";
 import React from "react";
 import Banner from "./Banner";
@@ -11,8 +10,9 @@ const Home = () => {
         <Banner></Banner>
         <About></About>
       </div>
+
       <BackgroundBeams></BackgroundBeams>
-     </div>
+    </div>
   );
 };
 
