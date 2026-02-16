@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import {
   FaGithub,
   FaFacebook,
-  FaInstagram,
   FaTwitterSquare,
+  FaInstagramSquare,
 } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
 import { IoMdDownload } from "react-icons/io";
@@ -55,45 +55,42 @@ const Banner = () => {
         </motion.div>
 
         {/* Social Icons */}
-        <motion.div
-          className="icon mt-10 flex justify-center lg:justify-start gap-6"
-          variants={iconVariant}
-        >
-          <div
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
-            onClick={() =>
-              window.open("https://github.com/tonmoybiswas07", "_blank")
-            }
+        <motion.div className="mt-10 flex justify-center lg:justify-start gap-6">
+          <a
+            href="https://github.com/tonmoybiswas07"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
           >
             <FaGithub />
-          </div>
-          <div
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
-            onClick={() =>
-              window.open(
-                "https://web.facebook.com/tonmoy.biswas.7564",
-                "_blank"
-              )
-            }
+          </a>
+
+          <a
+            href="https://web.facebook.com/tonmoy.biswas.7564"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
           >
             <FaFacebook />
-          </div>
-          <div
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
-            onClick={() =>
-              window.open("https://x.com/TonmoyBiswas945", "_blank")
-            }
+          </a>
+
+          <a
+            href="https://x.com/TonmoyBiswas945"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
           >
             <FaTwitterSquare />
-          </div>
-          <div
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
-            onClick={() =>
-              window.open("https://www.instagram.com/___b.tonmoy/", "_blank")
-            }
+          </a>
+
+          <a
+            href="https://www.instagram.com/___b.tonmoy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
           >
-            <FaInstagram />
-          </div>
+            <FaInstagramSquare />
+          </a>
         </motion.div>
 
         {/* Buttons */}
@@ -115,15 +112,21 @@ const Banner = () => {
           </Link>
 
           {/* Resume Button */}
-          <button className="bg-slate-800 group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block">
+
+          <a
+            href="/cv.pdf"
+            download="Tonmoy_Biswas_CV.pdf"
+            className="bg-slate-800 group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
+          >
             <span className="absolute inset-0 overflow-hidden rounded-full">
               <span className="absolute inset-0 rounded-full pointer-events-none bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
             </span>
+
             <div className="relative flex justify-center items-center space-x-2 z-10 rounded-full bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl py-3.5 px-4 ring-1 ring-white/10">
               <span className="text-xl px-1">GET RESUME</span>
               <IoMdDownload className="text-xl" />
             </div>
-          </button>
+          </a>
         </motion.div>
       </motion.div>
 
