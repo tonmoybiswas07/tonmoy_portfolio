@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
 import { IoMdDownload } from "react-icons/io";
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // Fixed import
 
 const Banner = () => {
   // Animation variants
@@ -25,9 +25,9 @@ const Banner = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-  const iconVariant = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  // Function to handle external links (bypass React Router)
+  const handleExternalLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -54,52 +54,54 @@ const Banner = () => {
           </h1>
         </motion.div>
 
-        {/* Social Icons */}
-        <motion.div className="mt-10 flex justify-center lg:justify-start gap-6">
-          <a
-            href="https://github.com/tonmoybiswas07"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
+        {/* Social Icons - Fixed with button handlers */}
+        <div className="mt-10 flex justify-center lg:justify-start gap-6">
+          <button
+            onClick={() =>
+              handleExternalLink("https://github.com/tonmoybiswas07")
+            }
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
+            aria-label="GitHub"
           >
             <FaGithub />
-          </a>
+          </button>
 
-          <a
-            href="https://web.facebook.com/tonmoy.biswas.7564"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
+          <button
+            onClick={() =>
+              handleExternalLink("https://web.facebook.com/tonmoy.biswas.7564")
+            }
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
+            aria-label="Facebook"
           >
             <FaFacebook />
-          </a>
+          </button>
 
-          <a
-            href="https://x.com/TonmoyBiswas945"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
+          <button
+            onClick={() => handleExternalLink("https://x.com/TonmoyBiswas945")}
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
+            aria-label="Twitter"
           >
             <FaTwitterSquare />
-          </a>
+          </button>
 
-          <a
-            href="https://www.instagram.com/___b.tonmoy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300"
+          <button
+            onClick={() =>
+              handleExternalLink("https://www.instagram.com/___b.tonmoy/")
+            }
+            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
+            aria-label="Instagram"
           >
             <FaInstagramSquare />
-          </a>
-        </motion.div>
+          </button>
+        </div>
 
         {/* Buttons */}
         <motion.div
           className="flex justify-center items-center md:justify-start md:items-start lg:justify-start lg:items-start flex-col sm:flex-row gap-4 mt-12"
           variants={item}
         >
-          {/* Contact Button */}
-          <Link to={"/contact"}>
+          {/* Contact Button - Using Link for internal routing */}
+          <Link to="/contact">
             <button className="bg-slate-800 group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block">
               <span className="absolute inset-0 overflow-hidden rounded-full">
                 <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
@@ -111,17 +113,15 @@ const Banner = () => {
             </button>
           </Link>
 
-          {/* Resume Button */}
-
+          {/* Resume Button - Using anchor for download */}
           <a
             href="/cv.pdf"
             download="Tonmoy_Biswas_CV.pdf"
             className="bg-slate-800 group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
           >
             <span className="absolute inset-0 overflow-hidden rounded-full">
-              <span className="absolute inset-0 rounded-full pointer-events-none bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+              <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
             </span>
-
             <div className="relative flex justify-center items-center space-x-2 z-10 rounded-full bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl py-3.5 px-4 ring-1 ring-white/10">
               <span className="text-xl px-1">GET RESUME</span>
               <IoMdDownload className="text-xl" />
@@ -141,7 +141,7 @@ const Banner = () => {
               <span className="w-4 h-4 rounded-full bg-green-500" />
             </div>
 
-            {/* Code block */}
+            {/* Code block - keep as is */}
             <pre className="p-6 text-sm sm:text-base lg:text-[17px] text-wrap">
               <code>
                 <span className="text-pink-500">const</span>{" "}

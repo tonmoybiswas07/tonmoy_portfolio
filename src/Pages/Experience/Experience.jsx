@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import { Briefcase } from "lucide-react";
 import { BackgroundBeams } from "@/Components/ui/background-beams";
 import img from "../../assets/971.jpg";
