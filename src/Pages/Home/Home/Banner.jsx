@@ -38,97 +38,68 @@ const Banner = () => {
       animate="visible"
     >
       {/* Left Content */}
-      <motion.div className="content flex-1" variants={item}>
-        <motion.div variants={item}>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white pt-10">
-            Hello,
-          </h1>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
-            This is <span className="text-[#F6339A]">TONMOY</span>, I'm a
-          </h1>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
-            Professional <span className="text-[#15F2B2]">FrontEnd</span>
-          </h1>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white">
-            <span className="text-[#15F2B2]">Developer</span>.
-          </h1>
-        </motion.div>
+     <motion.div className="content flex-1 z-10" variants={item}>
+  <motion.div variants={item}>
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white pt-10">
+      Hello,
+    </h1>
 
-        {/* Social Icons - Fixed with button handlers */}
-        <div className="mt-10 flex justify-center lg:justify-start gap-6">
-          <button
-            onClick={() =>
-              handleExternalLink("https://github.com/tonmoybiswas07")
-            }
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
-            aria-label="GitHub"
-          >
-            <FaGithub />
-          </button>
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3">
+      This is{" "}
+      <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-400 text-transparent bg-clip-text animate-gradient-x">
+        TONMOY
+      </span>
+      , I'm a
+    </h1>
 
-          <button
-            onClick={() =>
-              handleExternalLink("https://web.facebook.com/tonmoy.biswas.7564")
-            }
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
-            aria-label="Facebook"
-          >
-            <FaFacebook />
-          </button>
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white drop-shadow-[0_0_10px_#15F2B2]">
+      Professional <span className="text-[#15F2B2] glow-text">FrontEnd</span>
+    </h1>
 
-          <button
-            onClick={() => handleExternalLink("https://x.com/TonmoyBiswas945")}
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
-            aria-label="Twitter"
-          >
-            <FaTwitterSquare />
-          </button>
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white drop-shadow-[0_0_12px_#15F2B2]">
+      <span className="text-[#15F2B2] glow-text">Developer</span>.
+    </h1>
+  </motion.div>
 
-          <button
-            onClick={() =>
-              handleExternalLink("https://www.instagram.com/___b.tonmoy/")
-            }
-            className="text-4xl text-[#F6339A] hover:-translate-y-2 transition-transform duration-300 cursor-pointer bg-transparent border-none"
-            aria-label="Instagram"
-          >
-            <FaInstagramSquare />
-          </button>
-        </div>
-
-        {/* Buttons */}
-        <motion.div
-          className="flex justify-center items-center md:justify-start md:items-start lg:justify-start lg:items-start flex-col sm:flex-row gap-4 mt-12"
-          variants={item}
+  {/* Social Icons with Neon Hover */}
+  <div className="mt-10 flex justify-center lg:justify-start gap-6">
+    {[
+      { icon: FaGithub, url: "https://github.com/tonmoybiswas07" },
+      { icon: FaFacebook, url: "https://web.facebook.com/tonmoy.biswas.7564" },
+      { icon: FaTwitterSquare, url: "https://x.com/TonmoyBiswas945" },
+      { icon: FaInstagramSquare, url: "https://www.instagram.com/___b.tonmoy/" },
+    ].map((social, idx) => {
+      const Icon = social.icon;
+      return (
+        <button
+          key={idx}
+          onClick={() => handleExternalLink(social.url)}
+          className="text-4xl text-[#F6339A] hover:text-[#FF6EC7] hover:scale-125 transition-all duration-300"
         >
-          {/* Contact Button - Using Link for internal routing */}
-          <Link to="/contact">
-            <button className="bg-slate-800 group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block">
-              <span className="absolute inset-0 overflow-hidden rounded-full">
-                <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              </span>
-              <div className="relative flex justify-center items-center space-x-2 z-10 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-300 hover:scale-105 hover:shadow-xl py-3.5 px-4 ring-1 ring-white/10">
-                <span className="text-xl px-1">CONTACT ME</span>
-                <RiContactsFill className="text-xl" />
-              </div>
-            </button>
-          </Link>
+          <Icon />
+        </button>
+      );
+    })}
+  </div>
 
-          {/* Resume Button - Using anchor for download */}
-          <a
-            href="/cv.pdf"
-            download="Tonmoy_Biswas_CV.pdf"
-            className="bg-slate-800 group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
-          >
-            <span className="absolute inset-0 overflow-hidden rounded-full">
-              <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-            </span>
-            <div className="relative flex justify-center items-center space-x-2 z-10 rounded-full bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl py-3.5 px-4 ring-1 ring-white/10">
-              <span className="text-xl px-1">GET RESUME</span>
-              <IoMdDownload className="text-xl" />
-            </div>
-          </a>
-        </motion.div>
-      </motion.div>
+  {/* Buttons with Neon Glass */}
+  <motion.div
+    className="flex flex-col sm:flex-row gap-4 mt-12"
+    variants={item}
+  >
+    <Link to="/contact">
+      <button className="relative px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg shadow-purple-500/50 hover:scale-105 transition-all duration-300">
+        CONTACT ME <RiContactsFill className="inline ml-2 text-xl" />
+      </button>
+    </Link>
+
+    <a href="/cv.pdf" download="Tonmoy_Biswas_CV.pdf">
+      <button className="relative px-6 py-3 rounded-full font-semibold text-white border border-cyan-400 bg-cyan-400/10 hover:bg-cyan-400 hover:text-black hover:scale-105 transition-all duration-300">
+        GET RESUME <IoMdDownload className="inline ml-2 text-xl" />
+      </button>
+    </a>
+  </motion.div>
+</motion.div>
 
       {/* Right Image / Code Block */}
       <motion.div className="image flex-1" variants={item}>
