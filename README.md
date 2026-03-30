@@ -1,6 +1,6 @@
 # Tonmoy Biswas – Frontend Developer Portfolio
 
-![Portfolio Banner](https://i.ibb.co.com/KvJfs8h/Screenshot-2026-01-12-at-3-33-34-PM.png)
+![Portfolio Banner](https://i.ibb.co.com/j9w6jG94/Screenshot-2026-03-30-at-1-26-38-PM.png)
 
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://tonmoyportfolio.vercel.app/)
