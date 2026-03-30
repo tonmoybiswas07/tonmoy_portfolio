@@ -6,7 +6,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15, // প্রতিটা SkillCard এর মধ্যে delay
+      staggerChildren: 0.15, 
     },
   },
 };

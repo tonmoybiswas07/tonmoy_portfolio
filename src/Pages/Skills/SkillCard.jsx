@@ -3,21 +3,24 @@ import { motion } from "framer-motion";
 
 const SkillCard = ({ item }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}        // শুরুতে invisible + নিচ থেকে
-      animate={{ opacity: 1, y: 0 }}        // animate হয়ে normal position এ আসবে
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(34,197,94,0.35)" }} // hover effect
-      className="
-        w-[220px] h-[220px]
-        rounded-2xl
-        bg-gradient-to-b from-[#0B1026] to-[#050816]
-        border border-white/10
-        shadow-[0_0_40px_rgba(34,197,94,0.15)]
-        flex flex-col items-center justify-center
-        transition-all duration-300
-      "
-    >
+  <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+  className="
+    w-[220px] h-[220px]
+    rounded-2xl
+    bg-gradient-to-b from-[#0B1026] to-[#050816]
+    border border-white/10
+    shadow-[0_0_40px_rgba(34,197,94,0.15)]
+    flex flex-col items-center justify-center
+    transition-all duration-300
+    hover:shadow-[0_0_60px_rgba(34,197,94,0.35)]
+    cursor-pointer
+    relative z-10
+  "
+>
       <img
         src={item.image}
         alt={item.name}

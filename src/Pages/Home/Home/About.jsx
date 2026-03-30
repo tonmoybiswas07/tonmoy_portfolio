@@ -41,7 +41,7 @@ const About = () => {
           viewport={{ once: true }}
           className="flex-1 text-center lg:text-left"
         >
-          <h2 className="text-[#15F2B2] text-2xl mb-4">Who I am?</h2>
+          <h2 className="text-[#15F2B2] text-2xl mb-4">Who I am ?....</h2>
           <p className="text-gray-300 text-justify">
             My name is TONMOY BISWAS. I am a professional and enthusiastic
             programmer in my daily life. I am a quick learner with a
