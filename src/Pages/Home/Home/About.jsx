@@ -15,19 +15,24 @@ const About = () => {
       className="px-4 lg:px-20 py-12"
     >
       {/* Header */}
+
       <motion.div
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="flex justify-center items-center w-56 rounded-md mx-auto bg-[#1A1444] text-center px-5 py-3"
+        className="flex items-center justify-center gap-4 w-full"
       >
-        <h2 className="text-white text-3xl font-bold">ABOUT ME</h2>
+        <h2 className="text-white text-3xl font-bold bg-[#1A1444] px-5 py-3 rounded-md">
+          ABOUT ME
+        </h2>
+
+        {/* Right side horizontal line */}
+        <div className="h-[2px] w-32 bg-white"></div>
       </motion.div>
 
       {/* Content */}
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20 lg:mx-20 my-10">
-
         {/* Text */}
         <motion.div
           initial={{ x: -60, opacity: 0 }}
@@ -38,12 +43,14 @@ const About = () => {
         >
           <h2 className="text-[#15F2B2] text-2xl mb-4">Who I am?</h2>
           <p className="text-gray-300 text-justify">
-            My name is TONMOY BISWAS. I am a professional and enthusiastic programmer in my daily life.
-            I am a quick learner with a self-learning attitude. I love to learn and explore new technologies
-            and am passionate about problem-solving. I love almost all the stacks of web application development
-            and love to make the web more open to the world. My core skill is based on JavaScript and I love
-            to do most of the things using JavaScript. I am available for any kind of job opportunity that suits
-            my skills and interests.
+            My name is TONMOY BISWAS. I am a professional and enthusiastic
+            programmer in my daily life. I am a quick learner with a
+            self-learning attitude. I love to learn and explore new technologies
+            and am passionate about problem-solving. I love almost all the
+            stacks of web application development and love to make the web more
+            open to the world. My core skill is based on JavaScript and I love
+            to do most of the things using JavaScript. I am available for any
+            kind of job opportunity that suits my skills and interests.
           </p>
         </motion.div>
 
