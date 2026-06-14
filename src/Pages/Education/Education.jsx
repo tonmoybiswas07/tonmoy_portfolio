@@ -143,7 +143,7 @@ const Education = () => {
 
           <motion.div variants={item} className="flex flex-wrap gap-4 mb-6">
             <span className="rounded-full bg-emerald-500/10 px-4 py-2 text-emerald-400">
-              🏅 CGPA: 3.52
+              🏅 CGPA: 3.55
             </span>
             <span className="rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-400">
               🎓 Subject: CST
