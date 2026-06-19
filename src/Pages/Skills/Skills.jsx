@@ -137,6 +137,30 @@ const Skills = () => {
           </style>
         </div>
         <div className="py-23">
+    
+    <section className="min-h-[400px] flex items-center justify-center px-6 py-16 bg-slate-950">
+      <div className="max-w-xl w-full text-center bg-slate-900 border border-slate-800 rounded-2xl p-10">
+        <div className="text-5xl mb-4">⚡</div>
+
+        <h2 className="text-3xl font-bold text-white mb-3">
+          Skills Under Construction
+        </h2>
+
+        <p className="text-slate-400 mb-6">
+          This section is currently being updated. New technologies,
+          frameworks, and expertise will be showcased here soon.
+        </p>
+
+        <div className="w-full bg-slate-800 rounded-full h-2">
+          <div className="bg-cyan-500 h-2 w-[80%] rounded-full animate-pulse"></div>
+        </div>
+
+        <p className="mt-4 text-cyan-400 text-sm">
+          Loading skills...
+        </p>
+      </div>
+    </section>
+  
             <SkillSection skillJson={skillJson}></SkillSection>
         </div>
       </div>
