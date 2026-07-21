@@ -53,7 +53,7 @@ const Banner = () => {
     </h1>
 
     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white drop-shadow-[0_0_10px_#15F2B2]">
-      Professional <span className="text-[#15F2B2] glow-text">FrontEnd</span>
+      Professional <span className="text-[#15F2B2] glow-text">MERN Stack</span>
     </h1>
 
     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 text-white drop-shadow-[0_0_12px_#15F2B2]">
