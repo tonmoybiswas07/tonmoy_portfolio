@@ -33,12 +33,12 @@ const Experience = () => {
   const experienceData = [
     {
       date: "Jun 2025 - Jan 2026",
-      title: "Web Development (Learning)",
+      title: "MERN Stack Development",
       company: "Programming Hero",
     },
      {
       date: "Sep 2025 - Dec 2025",
-      title: "Front End Development (Learning)",
+      title: "Front End Development",
       company: "BD Calling Academy",
     },
     {
